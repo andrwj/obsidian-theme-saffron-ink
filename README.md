@@ -35,7 +35,7 @@ For manual installation, download `theme.css` and `manifest.json` from a publish
 <Vault>/.obsidian/themes/Saffron Ink/
 ```
 
-Restart Obsidian if the theme is not visible, or after updating its manifest. Select Saffron Ink under Appearance. This repository is preparing its first release; the community listing and release downloads become available after publication.
+Restart Obsidian if the theme is not visible, or after updating its manifest. Select Saffron Ink under Appearance. Published releases are available on GitHub. Community installation becomes available after the theme is accepted into the directory.
 
 ## Optional Font Awesome icons
 
@@ -72,7 +72,7 @@ npm run check:submission
 npm run release:prepare
 ```
 
-Release preparation creates the two upload assets under `artifacts/release/1.0.0/`. Local agent instructions, working notes, test artifacts, and development tools are excluded from the release assets. See [the release checklist](docs/release-checklist.md).
+Release preparation creates the two upload assets under `artifacts/release/1.0.1/`. Local agent instructions, working notes, test artifacts, and development tools are excluded from the release assets. See [the release checklist](docs/release-checklist.md).
 
 ## Credits and license
 

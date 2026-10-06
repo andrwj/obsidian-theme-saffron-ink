@@ -10,6 +10,7 @@
   --si-paper-alt: #e5d5a7;
   --si-paper-hover: #decc96;
   --si-ink: #000;
+  --si-caret: #d73a49;
   --si-muted: #4f5a63;
   --si-faint: #756a50;
   --si-saffron: #8a6d24;
@@ -79,7 +80,7 @@
   --text-warning: var(--si-orange);
   --text-selection: var(--si-selection);
   --text-highlight-bg: rgb(255 212 0 / 45%);
-  --caret-color: var(--si-ink);
+  --caret-color: var(--si-caret);
   --interactive-normal: var(--si-paper-alt);
   --interactive-hover: var(--si-paper-hover);
   --interactive-accent: var(--si-saffron);
@@ -231,6 +232,14 @@
   --graph-node-tag: var(--si-green);
   --graph-node-attachment: var(--si-purple);
   --canvas-background: var(--si-paper);
+}
+
+/* Override Vim's focused cursor accent without changing its block shape. */
+.theme-light .cm-fat-cursor,
+.theme-light .cm-fat-cursor-mark,
+.theme-light .cm-animate-fat-cursor,
+.theme-light .cm-editor.cm-focused .cm-scroller .cm-fat-cursor.cm-cursor-primary {
+  background-color: var(--caret-color);
 }
 
 /* Folder names stand out from normal file names, including collapsed folders. */
