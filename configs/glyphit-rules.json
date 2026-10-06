@@ -1,0 +1,14 @@
+[
+  {
+    "rule": "^.*$",
+    "icon": "FarRegularFolder",
+    "for": "folders",
+    "order": 0
+  },
+  {
+    "rule": "^.*$",
+    "icon": "FarRegularFileLines",
+    "for": "files",
+    "order": 1
+  }
+]

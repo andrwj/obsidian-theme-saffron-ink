@@ -1,0 +1,30 @@
+name: Prepare draft release
+on:
+  push:
+    tags:
+      - '*.*.*'
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run check:submission
+      - run: npm run release:prepare
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+      - name: Create draft with only the two theme assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          gh release create "$RELEASE_TAG" --verify-tag --draft \
+            --title "Saffron Ink $RELEASE_TAG" --notes-file docs/release-notes.md \
+            "artifacts/release/$RELEASE_TAG/theme.css" \
+            "artifacts/release/$RELEASE_TAG/manifest.json"

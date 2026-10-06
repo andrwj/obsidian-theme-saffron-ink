@@ -1,0 +1,25 @@
+{
+  "name": "obsidian-theme-saffron-ink",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Saffron paper and crisp ink for Obsidian, with six distinct heading weights.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "lint": "stylelint theme.css",
+    "validate": "node scripts/validate.mjs",
+    "check": "npm run lint && npm run validate",
+    "verify:render": "node scripts/verify-render.mjs",
+    "install:local": "npm run check && node scripts/install-local.mjs",
+    "release:prepare": "npm run check && node scripts/prepare-release.mjs",
+    "check:submission": "npm run check && node scripts/check-submission.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.63.0",
+    "stylelint": "^17.0.0",
+    "stylelint-config-obsidianmd": "^0.1.0"
+  }
+}

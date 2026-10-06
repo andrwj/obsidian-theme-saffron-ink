@@ -1,0 +1,18 @@
+node_modules/
+.DS_Store
+.codebase-memory/
+artifacts/
+
+# Local agent instructions and working notes are not published.
+AGENTS.md
+**/AGENTS.md
+CLAUDE.md
+**/CLAUDE.md
+.codex/
+.agents/
+.serena/
+.workgraph/
+.vscode/
+docs/porting-plan.md
+docs/verification.md
+screenshots/headings-*.png
