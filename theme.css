@@ -292,6 +292,15 @@
   color: color-mix(in srgb, var(--nav-item-color) 50%, var(--h1-color) 50%);
 }
 
+/* Cream at 80% opacity for code blocks in reading and editing modes. */
+.theme-light :is(.markdown-rendered, .cm-html-embed) pre,
+/* stylelint-disable-next-line selector-class-pattern -- Obsidian's built-in CodeMirror classes. */
+.theme-light .markdown-source-view.mod-cm6 :is(.HyperMD-codeblock-bg, .HyperMD-codeblock-begin-bg, .HyperMD-codeblock-end-bg) {
+  --code-background: rgb(255 248 231 / 80%);
+
+  background-color: var(--code-background);
+}
+
 /* Inline code keeps the original Markdown blue; fenced code uses token colors. */
 .theme-light .markdown-rendered :not(pre) > code,
 .theme-light .cm-s-obsidian span.cm-inline-code {
