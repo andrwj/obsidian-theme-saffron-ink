@@ -188,11 +188,14 @@
   --tag-background-hover: rgb(138 109 36 / 20%);
   --tag-radius: 0;
   --table-border-color: var(--si-border);
-  --table-header-background: var(--si-paper-alt);
-  --table-header-background-hover: var(--si-paper-hover);
+  --si-table-outer-border: #2c3e50;
+  --table-header-background: rgb(255 248 231 / 90%);
+  --table-header-background-hover: rgb(255 248 231 / 90%);
   --table-header-weight: 600;
-  --table-row-alt-background: rgb(138 109 36 / 4%);
-  --table-row-background-hover: rgb(138 109 36 / 9%);
+  --table-column-alt-background: transparent;
+  --table-row-alt-background: transparent;
+  --table-row-background-hover: transparent;
+  --table-row-alt-background-hover: transparent;
   --table-selection-border-radius: 0;
   --embed-border-start: 2px solid var(--si-border);
   --embed-background: transparent;
@@ -232,6 +235,47 @@
   --graph-node-tag: var(--si-green);
   --graph-node-attachment: var(--si-purple);
   --canvas-background: var(--si-paper);
+}
+
+/* Markdown table cells and perimeter in reading mode and Live Preview. */
+.theme-light :is(.markdown-rendered, .cm-html-embed, .cm-table-widget) th {
+  text-align: center;
+}
+
+.theme-light :is(.markdown-rendered, .cm-html-embed, .cm-table-widget) tbody tr:nth-child(odd) > td {
+  background-color: rgb(255 248 231 / 50%);
+}
+
+.theme-light :is(.markdown-rendered, .cm-html-embed, .cm-table-widget) tbody tr:nth-child(even) > td {
+  background-color: rgb(255 248 231 / 70%);
+}
+
+.theme-light :is(.markdown-rendered, .cm-html-embed) :is(th, td) {
+  padding: 10px;
+}
+
+.theme-light .markdown-source-view.mod-cm6 .cm-table-widget :is(th, td) {
+  padding: 0;
+}
+
+.theme-light .markdown-source-view.mod-cm6 .cm-table-widget .table-cell-wrapper {
+  padding: 10px;
+}
+
+.theme-light :is(.markdown-rendered, .cm-html-embed, .cm-table-widget) thead tr:first-child > th {
+  border-top-color: var(--si-table-outer-border);
+}
+
+.theme-light :is(.markdown-rendered, .cm-html-embed, .cm-table-widget) tbody tr:last-child > td {
+  border-bottom-color: var(--si-table-outer-border);
+}
+
+.theme-light :is(.markdown-rendered, .cm-html-embed, .cm-table-widget) tr > :is(th, td):first-child {
+  border-left-color: var(--si-table-outer-border);
+}
+
+.theme-light :is(.markdown-rendered, .cm-html-embed, .cm-table-widget) tr > :is(th, td):last-child {
+  border-right-color: var(--si-table-outer-border);
 }
 
 /* Override Vim's focused cursor accent without changing its block shape. */
