@@ -237,7 +237,11 @@
   --canvas-background: var(--si-paper);
 }
 
-/* Markdown table cells and perimeter in reading mode and Live Preview. */
+/* Markdown tables, cells, and perimeter in reading mode and Live Preview. */
+.theme-light :is(.markdown-rendered, .cm-html-embed, .cm-table-widget) table {
+  margin: 0;
+}
+
 .theme-light :is(.markdown-rendered, .cm-html-embed, .cm-table-widget) th {
   text-align: center;
 }
@@ -252,6 +256,12 @@
 
 .theme-light :is(.markdown-rendered, .cm-html-embed) :is(th, td) {
   padding: 10px;
+}
+
+.theme-light .markdown-source-view.mod-cm6 .cm-table-widget {
+  padding: 0 5px;
+  /* stylelint-disable-next-line declaration-no-important -- Obsidian sets the widget's negative margin with !important. */
+  margin: 0 !important;
 }
 
 .theme-light .markdown-source-view.mod-cm6 .cm-table-widget :is(th, td) {
