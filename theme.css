@@ -237,6 +237,13 @@
   --canvas-background: var(--si-paper);
 }
 
+/* Remove Obsidian's half-viewport scroll space after the document. */
+.theme-light .markdown-source-view.mod-cm6 .cm-content,
+.theme-light .markdown-preview-view .markdown-preview-sizer {
+  /* stylelint-disable-next-line declaration-no-important -- Obsidian sets this padding inline on resize. */
+  padding-bottom: 0 !important;
+}
+
 /* Separate the reading-mode document header from the note content. */
 .theme-light .markdown-preview-view .mod-header.mod-ui {
   padding-bottom: 1.5em;
