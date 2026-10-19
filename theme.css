@@ -237,6 +237,34 @@
   --canvas-background: var(--si-paper);
 }
 
+/* Separate the reading-mode document header from the note content. */
+.theme-light .markdown-preview-view .mod-header.mod-ui {
+  padding-bottom: 1.5em;
+}
+
+/* Place GlyphIt's document icon beside the editable document title. */
+.theme-light .glyphit-inline-title-wrapper.glyphit-title-above {
+  display: flex;
+  align-items: center;
+  gap: var(--size-4-2);
+  margin-block-end: var(--inline-title-margin-bottom);
+}
+
+.theme-light .glyphit-title-icon.glyphit-title-above {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  width: auto;
+  transform: none;
+}
+
+.theme-light .glyphit-inline-title-wrapper.glyphit-title-above > .inline-title {
+  flex: 1;
+  min-width: 0;
+  margin-inline: 0;
+  margin-block-end: 0;
+}
+
 /* Keep editing-mode heading lines compact. */
 /* stylelint-disable-next-line selector-class-pattern -- Obsidian's built-in CodeMirror classes. */
 .theme-light .cm-s-obsidian .cm-line.HyperMD-header {
