@@ -237,6 +237,11 @@
   --canvas-background: var(--si-paper);
 }
 
+.theme-light .markdown-rendered blockquote {
+  padding-inline-start: 10px;
+  border-left: 5px solid var(--blockquote-border-color);
+}
+
 /* Remove Obsidian's half-viewport scroll space after the document. */
 .theme-light .markdown-source-view.mod-cm6 .cm-content,
 .theme-light .markdown-preview-view .markdown-preview-sizer {

@@ -72,7 +72,7 @@ npm run check:submission
 npm run release:prepare
 ```
 
-Release preparation creates the two upload assets under `artifacts/release/1.0.1/`. Local agent instructions, working notes, test artifacts, and development tools are excluded from the release assets. See [the release checklist](docs/release-checklist.md).
+Release preparation creates the two upload assets under `artifacts/release/1.1.0/`. Local agent instructions, working notes, test artifacts, and development tools are excluded from the release assets. See [the release checklist](docs/release-checklist.md).
 
 ## Credits and license
 
