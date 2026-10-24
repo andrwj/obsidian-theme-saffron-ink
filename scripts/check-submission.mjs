@@ -12,20 +12,7 @@ for (const name of ['README.md', 'LICENSE', 'theme.css', 'manifest.json', 'versi
 const license = await read('LICENSE');
 assert.ok(license.includes('MIT License') && license.includes('Copyright 2020 Ling CHU'), 'Missing MIT attribution');
 const css = (await read('theme.css')).replace(/\/\*[\s\S]*?\*\//g, '');
-// These scoped overrides are required by Obsidian's inline resize padding and
-// its built-in !important table margin. All other !important uses remain banned.
-const importantExceptions = new Map([
-  ['.theme-light .markdown-source-view.mod-cm6 .cm-content, .theme-light .markdown-preview-view .markdown-preview-sizer', 'padding-bottom: 0 !important'],
-  ['.theme-light .markdown-source-view.mod-cm6 .cm-table-widget', 'margin: 0 !important'],
-]);
-const checkedCss = css.replace(/([^{}]+)\{([^{}]*)\}/g, (rule, selector, declarations) => {
-  const exception = importantExceptions.get(selector.trim().replace(/\s+/g, ' '));
-  if (!exception) return rule;
-  return `${selector}{${declarations.split(';').map(declaration =>
-    declaration.trim() === exception ? declaration.replace('!important', '') : declaration
-  ).join(';')}}`;
-});
-assert.ok(!/@import|!important|url\(\s*['"]?(?:https?:|\/\/)/i.test(checkedCss), 'Theme must remain self-contained and follow CSS guidelines');
+assert.ok(!/@import|!important|url\(\s*['"]?(?:https?:|\/\/)/i.test(css), 'Theme must remain self-contained and follow CSS guidelines');
 for (const [name, width, height] of [['screenshot.png', 512, 288], ['desktop.png', 1280, 720], ['font-awesome.png', 1280, 720]]) {
   const png = await readFile(path.join(root, 'screenshots', name));
   assert.equal(png.subarray(0, 8).toString('hex'), '89504e470d0a1a0a', `${name}: invalid PNG`);

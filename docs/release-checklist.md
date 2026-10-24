@@ -1,6 +1,6 @@
 # Release and Community submission
 
-## Prepared for version 1.1.0
+## Prepared for version 2.0.2
 
 - Public repository: https://github.com/andrwj/obsidian-theme-saffron-ink
 - Theme name: **Saffron Ink**
@@ -24,7 +24,7 @@ npm run check:submission
 npm run release:prepare
 ```
 
-`check:submission` validates metadata, official Obsidian CSS lint rules, screenshot sizes, local README links, licensing, remote CSS asset restrictions, and publication candidates. Release preparation copies **only** `theme.css` and `manifest.json` to `artifacts/release/1.1.0/`. Never upload the development repository as the theme payload.
+`check:submission` validates metadata, official Obsidian CSS lint rules, screenshot sizes, local README links, licensing, remote CSS asset restrictions, and publication candidates. Release preparation copies **only** `theme.css` and `manifest.json` to `artifacts/release/2.0.2/`. Never upload the development repository as the theme payload.
 
 These checks do not replace the Community directory's automated review. Desktop reading mode, Live Preview, source mode, and heading weights have been verified locally. Mobile is not yet verified and is not advertised as tested.
 
@@ -32,8 +32,8 @@ These checks do not replace the Community directory's automated review. Desktop 
 
 For each release, complete the GitHub publication steps below. The Community directory submission is needed only for the initial listing.
 
-1. Review the files and screenshots, then commit and push the reviewed 1.1.0 source to the repository's default branch.
-2. Create and push the tag **`1.1.0`**, exactly matching `manifest.json`. Do not prefix it with `v`.
+1. Review the files and screenshots, then commit and push the reviewed 2.0.2 source to the repository's default branch.
+2. Create and push the tag **`2.0.2`**, exactly matching `manifest.json`. Do not prefix it with `v`.
 3. Create a GitHub release for that tag and attach `theme.css` and `manifest.json` as separate release assets. Publish the release; a draft is insufficient for submission.
 4. Confirm that the public default branch, screenshot URL, tag, and both release asset URLs are accessible without authentication.
 5. Sign in to the [Obsidian Community directory](https://community.obsidian.md), connect the **andrwj** GitHub account, and accept the current developer policies.

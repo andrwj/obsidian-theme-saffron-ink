@@ -72,7 +72,15 @@ npm run check:submission
 npm run release:prepare
 ```
 
-Release preparation creates the two upload assets under `artifacts/release/1.1.0/`. Local agent instructions, working notes, test artifacts, and development tools are excluded from the release assets. See [the release checklist](docs/release-checklist.md).
+Release preparation creates the two upload assets under `artifacts/release/2.0.2/`. Local agent instructions, working notes, test artifacts, and development tools are excluded from the release assets. See [the release checklist](docs/release-checklist.md).
+
+## Changes in 2.0.2
+
+- Remove forced document-bottom and Live Preview table-widget spacing overrides to meet Community theme guidelines without `!important` declarations.
+- Let Obsidian manage document-bottom scroll space and table-widget outer spacing while retaining the theme's table cell styling.
+- Reject all `!important` declarations during submission checks.
+
+Release tags match the manifest version exactly, without a `v` prefix. Each published release includes `theme.css` and `manifest.json`.
 
 ## Credits and license
 

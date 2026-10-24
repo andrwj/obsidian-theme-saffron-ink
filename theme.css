@@ -242,13 +242,6 @@
   border-left: 5px solid var(--blockquote-border-color);
 }
 
-/* Remove Obsidian's half-viewport scroll space after the document. */
-.theme-light .markdown-source-view.mod-cm6 .cm-content,
-.theme-light .markdown-preview-view .markdown-preview-sizer {
-  /* stylelint-disable-next-line declaration-no-important -- Obsidian sets this padding inline on resize. */
-  padding-bottom: 0 !important;
-}
-
 /* Separate the reading-mode document header from the note content. */
 .theme-light .markdown-preview-view .mod-header.mod-ui {
   padding-bottom: 1.5em;
@@ -302,12 +295,6 @@
 
 .theme-light :is(.markdown-rendered, .cm-html-embed) :is(th, td) {
   padding: 10px;
-}
-
-.theme-light .markdown-source-view.mod-cm6 .cm-table-widget {
-  padding: 0 5px;
-  /* stylelint-disable-next-line declaration-no-important -- Obsidian sets the widget's negative margin with !important. */
-  margin: 0 !important;
 }
 
 .theme-light .markdown-source-view.mod-cm6 .cm-table-widget :is(th, td) {
